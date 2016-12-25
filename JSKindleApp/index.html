@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <!--<script>
+        function message() {
+            document.write("Hello from the head!<br />");
+        }
+    </script>-->
+
+    <script>
+        function sayHello(){
+            alert("Hello from my sayHello function!");
+        }
+    </script>
+
+    <script>
+        function sum(a, b) {
+            return a + b;
+        }
+    </script>
+
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+
+<!--Body starts below-->
+
+
+<body>
+
+    <script>
+        //write "good morning if time is less than 12
+        //else if time is > 12 && time < 18 write good afternoon
+        //else time >= 18 && time < 24 write good evening
+
+        var day = new Date();
+        var hour = day.getHours();
+
+        if(hour < 12){
+            document.write("Good Morning!");
+        }
+        else if (hour >= 12 && hour <= 18) {
+            document.write("Good Afternoon!");
+        }
+        else {
+            document.write("Good Evening!");
+        }  
+    </script>
+
+    <br />
+    <br />
+
+    <script>
+        var day = new Date();
+        dayOfWeek = day.getDay();
+        switch(dayOfWeek)
+        {
+            case 5:
+                document.write("TGIF");
+                break;
+            case 6:
+            case 0:
+                document.write("Party Time!");
+                break;
+            case 1:
+                document.write("Back to work :( ");
+                break;
+            default:
+                document.write("Waiting for the weekend huh?");
+        }
+    </script>
+
+
+    <script>
+        function message() {
+            document.write("<h1>Here is some h1 Text</h1>")
+            document.write("<p>Here is some p Text</p>")
+        }
+    </script>
+
+    <script>
+       message();
+    </script>
+
+    <script>
+        var i = 0;
+        for (var i = 0; i <= 5; i++) {
+            document.write("i = " + i);
+            document.write("<br />");
+        }
+    </script>
+
+    <br />
+
+    <script>
+        var i;
+        var myColors = new Array();
+        myColors[0] = "Red";
+        myColors[1] = "Blue";
+        myColors[2] = "Black";
+        for (var i in myColors) {
+            document.write(myColors[i]);
+            document.write("<br />");
+        }
+    </script>
+
+    <br />
+
+    <script>
+        for (var i = 0; i < 100; i++) {
+            if(i == 13)
+            {
+                break;
+            }
+            document.write("i = " + i);
+            document.write("<br />");
+        }
+    </script>
+
+    <script>
+        document.write("Welcome back from the loop you just broke out of!");
+    </script>
+    <br />
+    <br />
+
+    <p>Now the continue statement will skip over a condition that is met and keep iterating, in this case the condition is i == 2</p>
+
+    <script>
+        for (var i = 0; i < 5; i++) {
+            if(i == 2)
+            {
+                continue;
+            }
+            document.write("i = " + i);
+            document.write("<br />");
+        }
+    </script>
+
+    <form>
+        <input type="button" value="Say Hello" onclick="sayHello()" />
+    </form>
+
+    <script>
+        document.write(sum(3, 4));
+    </script>
+
+    <br />
+
+    <script>
+        var s="Busta";
+        document.write(s.length);
+    </script>
+    <br />
+
+  <script>
+      var myCar = new Object();
+      myCar.make = "Toyota";
+      myCar.model = "Camry";
+      myCar.year = 2000;
+      myCar.color = "Beige";
+      document.write(myCar.color.toUpperCase() + " " + myCar.make.toLowerCase() + " " + myCar.model.toUpperCase() + " " + myCar.year)
+  </script>
+
+    <script>
+        confirm("Are you reading this confirm statement?");
+    </script>
+
+    <br />
+
+    <!--<script>
+        for (var i = 0; i < 50; i++) {
+            document.write("CoverMyMeds");
+            document.write("<br />");
+        }
+    </script>-->
+
+    <script>
+        var colorArray1 = ['Red', 'Blue', 'Green', 'Yellow', 'Black'];
+        var colorArray2 = ['Magenta', 'Purple', 'Turquiose'];
+
+        document.write("Here's are concatenated lists of colors: <br /><br />")
+    //concat method on 2 Arrays
+        document.write(colorArray1.concat(colorArray2));
+        document.write('<br />');
+
+   //Find an index by value
+        document.write('The index of the color Yellow is ' + colorArray1.indexOf("Yellow"));
+        document.write('<br />');
+        
+        document.write(colorArray1.sort());
+        document.write('<br />');
+        
+    </script>
+
+
+
+
+</body>
+</html>
